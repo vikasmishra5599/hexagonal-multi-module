@@ -21,24 +21,18 @@ public class HexaService implements APIServicePort {
 
     public Person getHelloMsg(String fname) {
 
-       // Person p = getPerson(fname);
+        Person p = getPerson(fname);
 
      List<UniversityByState> universities = getUniversities("india");
 
-      /*  return Person.builder()
+        return Person.builder()
                 .fname(fname)
                 .lname(p.getLname())
                 .age(p.getAge())
                 .country(p.getCountry())
                 .universityByState(universities)
-                .build();*/
-        return Person.builder()
-                .fname("fname")
-                .lname("lastname")
-                .age(1)
-                .country("India")
-                .universityByState(universities)
                 .build();
+
 
     }
 

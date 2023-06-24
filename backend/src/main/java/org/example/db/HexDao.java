@@ -12,8 +12,12 @@ import static org.springframework.util.CollectionUtils.isEmpty;
 @Service
 public class HexDao implements DBServicePort {
 
+    private HexRepository hexRepository;
+
     @Autowired
-    HexRepository hexRepository;
+    public HexDao(HexRepository hexRepository) {
+        this.hexRepository = hexRepository;
+    }
 
     @Override
     public Person getPerson(String fname) {
